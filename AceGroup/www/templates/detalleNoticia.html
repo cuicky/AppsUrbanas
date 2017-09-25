@@ -1,0 +1,34 @@
+<style media="screen">
+  .content{
+    -webkit-border-bottom-right-radius: 10px;
+-webkit-border-bottom-left-radius: 10px;
+-moz-border-radius-bottomright: 10px;
+-moz-border-radius-bottomleft: 10px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+  }
+</style>
+<ion-view class="lateralMenu">
+
+  <ion-content class="lateralMenu" style="padding-top: 30px;">
+
+    <p ng-if="!noticia" class="text-center" style="color: white;margin-top: 25px;min-height: 400px;line-height: 400px;font-family: SamsumgBold;font-size: 25px;">
+      <i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i>
+      Cargando noticia</p>
+
+    <div class="list card" ng-if="noticia" style="padding: 20px 0 !important;">
+
+      <div class="item item-avatar" style="margin-bottom: 0;padding-bottom: 0;padding-left: 20px !important;">
+        <h2>{{noticia.title.rendered}}</h2>
+        <p>{{noticia.date | date:"dd/MM/yyyy"}}</p>
+      </div>
+
+      <div class="item item-body" style="padding-top: 0;">
+        <img class="full-image" style="max-width:100%!important;margin-top: 0 !important;" ng-src="{{noticia.better_featured_image.source_url}}">
+        <p  ng-bind-html="noticia.content.rendered"></p>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

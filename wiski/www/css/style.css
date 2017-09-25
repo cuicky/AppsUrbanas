@@ -1,0 +1,47 @@
+/* Empty. Add your own CSS if you like */
+.signUp{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  background: url(../../img/imageParis.jpg) no-repeat center center fixed;
+}
+
+.signUp h1{
+  font-family: 'Istok Web', sans-serif;;
+  color:white;
+  font-size: 7em;
+  margin: 50px auto 20px auto;
+  display: block;
+  text-align: center;
+}
+
+.signUp p{
+  font-family: 'Istok Web', sans-serif;
+  color:white;
+  font-size: 2em;
+  display: block;
+  text-align: center;
+}
+
+.signUp .scroll{
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 0;
+}
+
+.signUp .facebook{
+  color: #fff;background-color: #3b5998;border: 1px solid #335190;
+  position: absolute;
+  bottom: 50px;
+}
+
+.signUp .instagram{
+  color: #fff;background-color: #3f729b;
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 0;
+}

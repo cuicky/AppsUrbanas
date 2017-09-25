@@ -1,0 +1,28 @@
+<ion-view class="fullBg">
+  <ion-content scroll="false">
+    <img class="menuIcon"  menu-toggle="left" src="img/menu-lines-icon.png">
+<img class="cartIcon"  src="img/cart-header-icon.png">
+    <img class="logoIcon"  src="img/logo-header-home.png">
+    <p ui-sref="app.checkout" class="indicator" ng-if="productosSeleccionados.length>0">
+      <span id="dataProduct"  style="position:relative;" class="animated fadeIn">{{productosSeleccionados.length}}</span>
+    </p>
+    <div class="styleContainer col-md-12">
+      <h2 ng-if="!productos"><i  class="fa fa-spinner fa-spin fa-2x fa-fw"></i> Cargando</h2>
+      <h2 ng-if="productos" class="pull-left">Productos</h2>
+      <p ng-if="productos" class="indicadorProductos">
+        <strong>1</strong>/{{productos.length}}
+      </p>
+      <div style="display:block;clear:both;" ng-if="productos">
+        <div ng-click="addProducto(p)" class="productItem" ng-repeat="p in productos">
+          <img class="img-responsive" ng-src="{{p.better_featured_image.source_url}}" alt="">
+          <div class="info">
+            <p>{{p.title.rendered}} <i class="fa fa-registered" aria-hidden="true"></i></p>
+            <p class="price">$ 550.00 MXN</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

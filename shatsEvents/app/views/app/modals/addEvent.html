@@ -1,0 +1,58 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Nuevo Evento</h3>
+</div>
+<div class="modal-body" id="modal-body" style="overflow:hidden;">
+  <form>
+    <div class="form-group col-md-6">
+      <label for="exampleInputEmail1">Nombre del evento</label>
+      <input ng-model="newEvent.name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre Completo">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="exampleInputPassword1">Locacion</label>
+      <input ng-model="newEvent.ubic" type="text" class="form-control" id="exampleInputPassword1" placeholder="(442-442-42-42)">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="exampleInputPassword1">Fecha</label>
+      <input ng-model="newEvent.ubic" type="text" class="form-control" id="exampleInputPassword1" placeholder="dd/mm/yyyy">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="exampleInputPassword1">Universidad</label>
+      <input ng-model="newEvent.ubic" type="text" class="form-control" id="exampleInputPassword1" placeholder="(442-442-42-42)">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="exampleInputPassword1">Cliente</label>
+      <select class="form-control" ng-disabled="!clientes" ng-model="newEvent.client" ng-options="ct.$id as ct.name for ct in clientes">
+      </select>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="exampleInputPassword1"># de graduados</label>
+      <input ng-model="newEvent.number" type="text" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="exampleInputPassword1"># de boletos</label>
+      <input ng-model="newEvent.number" type="text" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="exampleInputPassword1">Costo por boleto</label>
+      <input ng-model="newEvent.number" type="text" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="exampleInputPassword1">Código del evento</label>
+      <input ng-model="newEvent.number" type="text" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+    </div>
+     <div class="clearfix"></div>
+     <div class="form-group col-md-12">
+       <label for="exampleInputPassword1">Descripción del evento</label>
+     </div>
+<div text-angular ng-model="htmlVariable"></div>
+
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+</div>

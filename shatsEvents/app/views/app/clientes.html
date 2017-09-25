@@ -1,0 +1,100 @@
+<div class="col-md-12">
+  <h1 class="pull-left">Clientes de Shats Events</h1>
+  <button class="agregarBoton pull-right btn btn-primary" ng-click="vm.addClient()"><i class="fa fa-plus"></i> Agregar nuevo cliente</button>
+  <div class="clearfix"></div>
+  <div class="col-md-3 no-padding-left">
+    <input type="text" class="form-control" placeholder="Buscar en clientes...">
+  </div>
+    <table class="table table-hover">
+       <caption>Clientes registrados.</caption>
+        <thead>
+          <tr>
+            <th><i class="fa fa-user"></i> Nombre</th>
+            <th> <i class="fa fa-envelope-o" aria-hidden="true"></i> Correo Electronico</th>
+            <th><i class="fa fa-phone" aria-hidden="true"></i> Teléfono</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="clt in clientes track by $index">
+            <th scope="row">{{clt.name}}</th>
+            <td>{{clt.email}}</td>
+            <td>{{clt.phone}}</td>
+          </tr>
+
+        </tbody>
+      </table>
+      <div class="clearfix"></div>
+      <nav aria-label="Page navigation" class="pull-right">
+        <ul class="pagination">
+          <li >
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+</div>
+
+<hr>
+
+<!--
+<div class="col-md-12">
+  <h1 class="pull-left">Contrataciones con Shats Events</h1>
+  <!-- <button class="agregarBoton pull-right btn btn-primary"><i class="fa fa-plus"></i> Agregar nuevo cliente</button> -->
+  <!--div class="clearfix"></div>
+  <!-- <div class="col-md-3 no-padding-left">
+    <input type="text" class="form-control" placeholder="Buscar en clientes...">
+  </div> -->
+    <!--table class="table table-hover">
+       <caption>Historial de contrataciones.</caption>
+        <thead>
+          <tr>
+            <th><i class="fa fa-user"></i> Paquete</th>
+            <th> <i class="fa fa-envelope-o" aria-hidden="true"></i> Fecha</th>
+            <!-- <th><i class="fa fa-phone" aria-hidden="true"></i> Teléfono</th> -->
+          <!--/tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Paquete basico</th>
+            <td>05/Ago/2017</td>
+          </tr>
+          <tr>
+            <th scope="row">paquete intermedio</th>
+            <td>05/Ago/2016</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="clearfix"></div>
+      <nav aria-label="Page navigation" class="pull-right">
+        <ul class="pagination">
+          <li >
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+</div>
+
+<hr-->

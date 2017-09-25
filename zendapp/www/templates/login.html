@@ -1,0 +1,65 @@
+<ion-view >
+  <ion-content class="login" scroll="false">
+    <div class="errorContainer"ng-if="error">{{error}}</div>
+    <img class="noConection img-responsive" src="img/conexion-header-login.png" alt="Zend App"/>
+    <img class="logoImage img-responsive" src="img/logo-header-login.png" alt="Zend App"/>
+    <p class="text-center welcomeMsg">
+      Bienvenido a <strong>ZEND</strong>, para iniciar sesión en tu cuenta, simplemente ingresa tu usuario y contraseña a continuación.
+    </p>
+
+    <div class="inputContainer">
+      <img class="pull-left" src="img/user-login.png" alt="user"/>
+      <input ng-model="email" class="pull-left" type="text" placeholder="Introduce tu email">
+    </div>
+
+    <div class="inputContainer">
+      <img class="pull-left" src="img/password-login.png" alt="user"/>
+      <input ng-model="password" class="pull-left" type="password" placeholder="contraseña">
+    </div>
+    <div class="clearfix"></div>
+    <button ng-if="action=='login' && !loading"  class="btn btnIniciarSesion" ng-click="signIn(email,password)" ng-disabled="email.length<5 || password.length==0">Iniciar Sesión</button>
+    <button ng-if="action=='register' && !loading"  class="btn btnIniciarSesion" ng-click="signUp(email,password)" ng-disabled="email.length<5 || password.length==0">Crear cuenta</button>
+    <strong ng-if="loading" class="col-md-12 text-center forgot">
+    <i  class="fa fa-spinner fa-spin fa-2x fa-fw"></i> Cargando ...</strong>
+    <div class="clearfix"></div>
+    <strong ng-if="action=='login'" class="text-center col-md-12 forgot">¿Olvidaste tu contraseña?</strong>
+    <div ng-if="action=='login'">
+      <p class="col-md-12 text-center">
+        También puedes iniciar sesión en
+      </p>
+      <div class="col-md-12 networkContainer">
+        <button class="btn">
+        <i class="fa fa-facebook" aria-hidden="true"></i>FACEBOOK
+        </button>
+        <button class="btn">
+          <i class="fa fa-twitter" aria-hidden="true"></i>TWITTER
+        </button>
+      </div>
+    </div>
+
+    <div ng-if="action=='register'">
+      <p class="col-md-12 text-center">
+        También puedes registarte con
+      </p>
+      <div class="col-md-12 networkContainer">
+        <button class="btn">
+        <i class="fa fa-facebook" aria-hidden="true"></i>FACEBOOK
+        </button>
+        <button class="btn">
+          <i class="fa fa-twitter" aria-hidden="true"></i>TWITTER
+        </button>
+      </div>
+    </div>
+
+
+    <p class="col-md-12 text-center" ng-click="toggleAction()" ng-if="action=='login'">
+      Aún sin una cuenta?
+      <strong>Registrate</strong>
+    </p>
+
+    <p class="col-md-12 text-center" ng-click="toggleAction()" ng-if="action=='register'">
+      Ya tienes una cuenta?
+      <strong>Inicia Sesión</strong>
+    </p>
+  </ion-content>
+</ion-view>

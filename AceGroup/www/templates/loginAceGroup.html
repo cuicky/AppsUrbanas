@@ -1,0 +1,186 @@
+<style media="screen">
+  img{
+    max-width:50% !important;
+    display:block !important;
+    margin:80px auto 20px auto;
+    float:none;
+  }
+
+  .item-stacked-label{
+    border:none;
+    padding-bottom:10px;
+  }
+
+  .button-full{
+    margin-top:90px !important;
+    width: 90% !important;
+    margin: 10px auto;
+    display:block;
+  }
+
+  input{
+    width:95% !important;
+  }
+
+  .welcomeLegend{
+    width: 80%;
+    margin: 0 auto 20px auto;
+    color:#fff;
+  }
+
+  .loginBack{
+    background: url(img/bg-app.png) no-repeat center center fixed !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+  }
+  .pull-left{
+    float:left !important;
+    display:block !important;
+  }
+
+  .item-input input{
+    display:block;
+    float:left;
+    width:80%!important;
+    color:#fff;
+    background:none !important;
+    font-family: SamsumgRegular;
+  }
+
+  .item-input{
+    padding-bottom:10px;
+    display:block;
+    overflow:hidden;
+    border-bottom: 1px solid #344B70 !important;
+    margin-bottom:10px;
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .item-input img{
+    margin:0 10px 0 0 !important;
+  }
+
+  .forgotPassword{
+    display:block;
+    float:right;
+    color:white;
+    padding-right:10%;
+    display:block;
+  }
+
+  .list{
+    margin-bottom:0px;
+  }
+
+  .sinCuenta,.powered{
+    color:#fff;
+    display:block;
+    text-align:center;
+  }
+
+  .sinCuenta strong{
+    color:white;
+  }
+
+  .divider{
+    display:block;
+    clear:both;
+    margin:20px auto;
+    overflow:hidden;
+    border-bottom: 2px solid #546A8C;
+    width:10%;
+  }
+
+  .button-positive{
+    background:#008DD9 !important;
+    color:white !important;
+    border-radius:5px;
+    text-transform:uppercase;
+    margin-top:50px !important;
+  }
+
+  .sinCuenta{
+    margin-bottom:40px;
+  }
+
+  .powered{
+    font-size:12px;
+  }
+
+
+  .scroll{
+    overflow: hidden;
+  }
+</style>
+
+
+<ion-view class="loginBack">
+<ion-content class="loginBack"  overflow-scroll="false" style="overflow:hidden;">
+  <div class="animated fadeIn" id="mainAnimation">
+    <img style="margin:55px auto 30px auto;" src="img/logo-ace-invertido.png" class="img-responsive" alt="ace group inc">
+    <p ng-if="errorLogin" style="display:block;width:80%;margin: 10px auto;color: #a94442;background-color: #f2dede;border-color: #ebccd1;padding: 20px 10px;font-size: 13px;text-align: center;border-radius:7px;">
+      {{errorLogin}}
+    </p>
+
+    <p ng-if="loginSuccess" style="display:block;width:80%;margin: 10px auto;color: #3c763d;background-color: #dff0d8;border-color: #d6e9c6;padding: 20px 10px;font-size: 13px;text-align: center;border-radius:7px;">
+      {{loginSuccess}}
+    </p>
+    <p class="text-center welcomeLegend">
+      Bienvenido a <strong style="color:white;font-family:SamsumgBold">ACE Group Inc</strong>, para iniciar sesión en tu cuenta, simplemente ingresa tu usuario y contraseña a continuación
+    </p>
+
+    <div class="list" ng-hide="registrando==true">
+      <label ng-show="accion=='registro'" class="item item-input item-stacked-label">
+        <img class="pull-left" src="img/user-ico.png" alt="email">
+        <input type="text" ng-model="user.email" placeholder="usted@acegroupinc.net">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <img class="pull-left" src="img/user-ico.png" alt="username">
+        <input type="text" ng-model="user.username" placeholder="Nombre de usuario">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <img class="pull-left" src="img/password-ico.png" alt="password">
+        <input type="password" ng-model="user.password" placeholder="Contraseña">
+      </label>
+
+    </div>
+
+    <p ng-show="registrando==true" style="margin-top: 20px;text-align:center;color:white;font-size:20px;">
+      <i class="fa fa-circle-o-notch fa-spin" aria-hidden="true" style="margin-right:10px;"></i>Iniciando sesión
+    </p>
+
+    <!-- <strong class="forgotPassword">¿Olvidaste tu contraseña?</strong> -->
+
+    <button ng-show="accion=='login'" class="button button-full button-positive" ng-click="login(user)" ng-disabled="registrando==true || (user.username.length==0 || user.password.length==0)" style="margin-top: 20px !important;">
+      Iniciar Sesión
+    </button>
+
+    <button ng-show="accion=='registro'" class="button button-full button-positive" ng-click="create(user)" ng-disabled="registrando==true || (user.username.length==0 || user.password.length==0)" style="margin-top: 20px!important;">
+      Crear cuenta
+    </button>
+
+    <div class="divider"></div>
+
+    <p class="sinCuenta" ng-show="accion=='login'" ng-click="accion='registro'">
+      ¿Aún sin una cuenta? <strong style="font-family:SamsumgBold"> Registrate</strong>
+    </p>
+
+    <p class="sinCuenta" ng-show="accion=='registro'" ng-click="accion='login'">
+      ¿Ya tienes una cuenta? <strong style="font-family:SamsumgBold"> Inicia sesión</strong>
+    </p>
+
+    <p class="powered">
+      ACE GROUP, INC. POWERED BY <strong style="font-family:SamsumgBold">
+        <a style="font-family:SamsumgBold;color:white;text-decoration:none;" href="#" onclick="window.open('https://www.hixs.co/', '_system', 'location=yes');" >HIXS</a>
+      </strong>
+    </p>
+  </div>
+
+
+
+</ion-content>
+
+</ion-view>

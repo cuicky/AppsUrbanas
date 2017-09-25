@@ -1,0 +1,24 @@
+<ion-view class="fullBg">
+  <ion-content scroll="false">
+    <img class="menuIcon"  menu-toggle="left" src="img/menu-lines-icon.png">
+<img class="cartIcon"  src="img/cart-header-icon.png">
+    <img class="logoIcon"  src="img/logo-header-home.png">
+    <div class="styleContainer">
+      <p>Edita la información de tu cuenta:</p>
+
+
+
+      <div class="inputContainer">
+        <ng-avatar ng-click="openPopover($event)" width="150" style="margin:20px auto;" initials="RM" bg-color="#EF6332" text-color="white" round-shape="true" ></ng-avatar>
+        <label for="">Nombre Completo</label><br>
+        <img class="pull-left" src="img/user-login.png" alt="user"/>
+        <input ng-model="nameComplete" class="pull-left" type="text" placeholder="Ricardo Méndez Villalpando">
+      </div>
+
+      <button ng-click="openPopover($event)" class="btn btnIniciarSesion">
+      <i class="fa fa-save" aria-hidden="true"></i> Guardar
+      </button>
+    </div>
+
+  </ion-content>
+</ion-view>

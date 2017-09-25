@@ -1,0 +1,29 @@
+<ion-view class="fullBg">
+  <ion-content>
+    <img class="menuIcon"  menu-toggle="left" src="img/menu-lines-icon.png">
+    <img class="logoIcon" style="width: 45%;right: 27%;"  src="img/logo-header-home.png">
+    <div class="styleContainer" style="top: 15%;width: 72%;">
+      <h3>Checkout</h3>
+      <div class="shopipngCartItem" ng-repeat="p in productosSeleccionados track by $index">
+        <img class="img-responsive" ng-src="{{p.better_featured_image.source_url}}" alt="">
+        <div class="info">
+          <p>{{p.title.rendered}}</p>
+          <p>$ 500.00 MXN</p>
+
+        </div>
+        <div class="selector">
+          <i ng-click="p.cnt=p.cnt+1"class="fa fa-chevron-up"></i>
+          <input readonly type="text" ng-model=p.cnt name="" id="">
+          <i ng-click="p.cnt=p.cnt-1"class="fa fa-chevron-down"></i>
+        </div>
+      </div>
+      <p class="subT" ng-if="productosSeleccionados.length>0">
+        <strong>  Sub total</strong>
+        <span>$1,500.00 MXN</span>
+        <button class="toCheck"ng-if="productosSeleccionados.length>0">Continuar</button>
+      </p>
+
+    </div>
+
+  </ion-content>
+</ion-view>

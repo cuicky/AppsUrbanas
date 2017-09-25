@@ -1,0 +1,51 @@
+<div class="col-md-12">
+  <h1 class="pull-left">Paquetes registrados de Shats Events</h1>
+  <button ng-click="vm.addPaquete()" class="agregarBoton pull-right btn btn-primary"><i class="fa fa-plus"></i> Agregar nuevo paquete</button>
+  <div class="clearfix"></div>
+  <div class="col-md-3 no-padding-left">
+    <input type="text" class="form-control" placeholder="Buscar en paquetes...">
+  </div>
+    <table class="table table-hover">
+       <caption>Paquetes registrados.</caption>
+        <thead>
+          <tr>
+            <th><i class="fa fa-tag"></i> Nombre de paquete</th>
+            <th> <i class="fa fa-file-text-o" aria-hidden="true"></i> descripcion</th>
+            <th><i class="fa fa-users"></i> Cupo</th>
+            <th><i class="fa fa-dollar"></i> Costo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="paq in paquetes">
+            <th scope="row">{{paq.name}}</th>
+            <td>{{paq.description}}</td>
+            <td>
+              {{paq.cupo}}
+            </td>
+            <td>{{paq.costo | currency:"$"}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="clearfix"></div>
+      <nav aria-label="Page navigation" class="pull-right">
+        <ul class="pagination">
+          <li >
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+</div>
+
+<hr>

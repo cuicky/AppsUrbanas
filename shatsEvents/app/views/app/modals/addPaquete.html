@@ -1,0 +1,40 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Nuevo Paquete</h3>
+</div>
+<div class="modal-body" id="modal-body">
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Nombre</label>
+      <input ng-model="newPaquete.name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre Completo">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Descripcion</label>
+      <input ng-model="newPaquete.description" type="text" class="form-control" id="exampleInputPassword1" placeholder="Correo Electronico">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Cupo</label>
+      <select ng-model="newPaquete.cupo" id="" class="form-control">
+        <option value="1 - 10 personas">1 - 10 personas</option>
+        <option value="11 - 20 personas">11 - 20 personas</option>
+        <option value="21 - 30 personas">21 - 30 personas</option>
+        <option value="31 - 40 personas">31 - 40 personas</option>
+        <option value="41 - 50 personas">41 - 50 personas</option>
+        <option value="51 - 60 personas">51 - 60 personas</option>
+        <option value="61 - 70 personas">61 - 70 personas</option>
+        <option value="71 - 80 personas">71 - 80 personas</option>
+        <option value="81 - 90 personas">81 - 90 personas</option>
+        <option value="91 - 100 personas">91 - 100 personas</option>
+        <option value="100 + personas">100 + personas</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Costo</label>
+      <input ng-model="newPaquete.costo" type="text" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+    </div>
+
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+</div>

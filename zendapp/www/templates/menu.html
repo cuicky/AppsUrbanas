@@ -1,0 +1,58 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+
+  <ion-side-menu side="left">
+    <ion-content class="menuContainer" scroll="false">
+      <ion-list>
+        <ion-item class="item-text-wrap" menu-close>
+          <img class="img-profile img-circle pull-left" width="60"  src="https://scontent.fqro1-1.fna.fbcdn.net/v/t1.0-1/p40x40/20476558_1638122846245604_589771016998619781_n.jpg?oh=7d8d08d04b4ba282fa802f0a4c8403f5&oe=59FD65A5">
+          <p class="pull-left">
+            <strong>RICARDO MENDEZ VILLALPANDO</strong>
+            <span>ricardomendezvillalpando@gmail.com</span>
+          </p>
+        </ion-item>
+        <ion-item menu-close ui-sref="app.cuenta">
+          <img class="pull-left iconoMenu"  src="img/mi-cuenta-ico-menu.png">
+          <span class="menuItem">MI CUENTA</span>
+        </ion-item>
+        <ion-item menu-close ui-sref="app.tienda">
+          <img width="30" class="pull-left iconoMenu"  src="img/cart-header-icon.png">
+          <span class="menuItem">TIENDA</span>
+        </ion-item>
+        <ion-item menu-close>
+          <img class="pull-left iconoMenu"  src="img/pago-ico-menu.png">
+          <span class="menuItem">PAGO</span>
+        </ion-item>
+        <ion-item menu-close>
+          <img class="pull-left iconoMenu"  src="img/configuracion-ico-menu.png">
+          <span class="menuItem">CONFIGURACIÓN</span>
+        </ion-item>
+        <ion-item menu-close>
+          <img class="pull-left iconoMenu"  src="img/cotizaciones-menu-ico.png">
+          <span class="menuItem coti">MIS COTIZACIONES</span>
+        </ion-item>
+      </ion-list>
+
+      <p class="cerrarSesionMenu" ui-sref="login" menu-close>
+        <img src=" img/cerrar-sesion-menu-ico.png" alt=""/>
+        <span>CERRAR SESIÓN</span>
+      </p>
+    </ion-content>
+
+  </ion-side-menu>
+</ion-side-menus>
+
+<!-- <drawer side="left">
+    <ion-content>
+      <h2>Menu</h2>
+      <button ng-click="toggleDrawer()">Close</button>
+      <ion-list>
+        <ion-item>Friends</ion-item>
+        <ion-item>Favorites</ion-item>
+        <ion-item>Search</ion-item>
+      </ion-list>
+    </ion-content>
+  </drawer> -->

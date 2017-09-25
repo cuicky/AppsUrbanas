@@ -1,0 +1,68 @@
+<div class="col-md-12">
+  <h1 class="pull-left">Eventos registrados de Shats Events</h1>
+  <button class="agregarBoton pull-right btn btn-primary" ng-click="vm.addEvent()"><i class="fa fa-plus"></i> Agregar nuevo evento</button>
+  <div class="clearfix"></div>
+  <div class="col-md-3 no-padding-left">
+    <input type="text" class="form-control" placeholder="Buscar en eventos...">
+  </div>
+    <table class="table table-hover">
+       <caption>Eventos registrados.</caption>
+        <thead ng-if="eventos.length>0">
+          <tr>
+            <th><i class="fa fa-tag"></i> Nombre de evento</th>
+            <th> <i class="fa fa-file-text-o" aria-hidden="true"></i> Cliente</th>
+            <th> <i class="fa fa-file-text-o" aria-hidden="true"></i> Paquete</th>
+            <th><i class="fa fa-users"></i> ubicación</th>
+            <th> <i class="fa fa-file-text-o" aria-hidden="true"></i> Boletos</th>
+            <th><i class="fa fa-users"></i> Alergicos</th>
+            <th><i class="fa fa-users"></i> diabeticos</th>
+            <th><i class="fa fa-users"></i> vegetarianos</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-if="eventos" ng-repeat="ev in eventos track by $index">
+            <th scope="row">{{ev.name}}</th>
+            <td>{{ev.client.name}}</td>
+            <td>{{ev.paquete.name}}</td>
+            <td>{{ev.ubic}}</td>
+            <td>
+              {{ev.number}} boleto(s)
+            </td>
+            <td>
+              <p>{{ev.alergicos}} <small ng-if="ev.alergicos>0">( {{ev.alergia}} )</small></p>
+            </td>
+
+            <td>
+
+              <p>{{ev.diabeticos}}</p>
+            </td>
+            <td>
+              <p>{{ev.vegetarianos}}</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="clearfix"></div>
+      <nav aria-label="Page navigation" class="pull-right">
+        <ul class="pagination">
+          <li >
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+</div>
+
+<hr>

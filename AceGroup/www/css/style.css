@@ -1,0 +1,183 @@
+/* Empty. Add your own CSS if you like */
+@font-face {
+    font-family: SamsumgBold;
+    src: url(fonts/SamsungSharpSans-Bold.otf);
+}
+
+@font-face {
+    font-family: SamsumgRegular;
+    src: url(fonts/SamsungSharpSans-Regular.ttf);
+}
+
+body{
+  background: url(../img/menu-bg.png)#2E3292 no-repeat center center fixed !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+}
+
+p,input,textarea{
+  font-family: SamsumgRegular;
+}
+
+body.menu-open ion-side-menus, body.menu-open ion-side-menu,.menuTranslate{
+  background: url(../img/menu-bg.png)#2E3292 no-repeat center center fixed !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+}
+
+.lateralMenu{
+  background: url(../img/bg-app.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.lateralMenu .bar-stable,.lateralMenu a,.lateralMenu .item{
+  background:none !important;
+}
+
+.lateralMenu .item{
+  border:none ;
+}
+
+.bar-stable{
+  background:white !important;
+}
+
+.menuHeader{
+  padding-top: 10px !important;
+}
+
+.title-center{
+  height:80px !important;
+  background:white !important;
+}
+
+/*.nav-bar-title img{
+  width: 110px;
+  margin: 10px auto;
+}*/
+
+.lateralMenu strong{
+  color:white;
+  text-transform:uppercase;
+}
+
+.lateralMenu .elemento{
+  background:white !important;
+  overflow:hidden;
+  width:90% !important;
+  margin:15px auto;
+  border-radius:5px;
+  padding:5px 0 !important;
+}
+
+.item-content{
+  padding:0 !important;
+}
+
+.infoUser span{
+  display:block !important;
+}
+
+.infoUser span:first-child{
+  text-transform:uppercase; !important
+  color:#3E5A81 !important;
+  text-align:center !important;
+  font-weight:bold !important;
+}
+
+.infoUser span:last-child{
+  text-transform:uppercase !important;
+}
+
+.infoUser .divider{
+  display:block !important;
+  clear:both !important;
+  border-bottom:1px solid !important;
+  margin:5px 0 !important;
+}
+
+.infoUser{
+  display:block !important;
+  float:left !important;
+}
+
+.menuHeader{
+  overflow:hidden;
+  background:white !important;
+  height: 65px !important;
+  padding-top: 0px !important;padding-bottom: 0px !important;
+}
+
+.menuHeader img{
+  position: relative !important;
+  top:10px !important;
+}
+
+.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
+  overflow:hidden;
+  background:white !important;
+  height: 65px !important;
+  padding-top: 0px !important;padding-bottom: 20px !important;
+}
+
+.menuHeader i,.menuHeader .button.button-clear{
+  color:#0D3263 !important;
+}
+
+.menuPrincipal .list{
+  margin-top: 130px;
+  padding-left: 30px;
+}
+
+.menuPrincipal a{
+  text-decoration: none !important;
+  line-height: 50px !important;
+}
+
+.menuPrincipal .item{
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.elemento img,.menuPrincipal img{
+  float: left !important;
+  margin: 0 !important;
+  width: 15%;
+    position: relative;
+    top: 12px;
+}
+
+.element .item-content{
+  display: block !important;
+  overflow: hidden!important;
+}
+
+.menuPrincipal img{
+  margin-right: 10px !important;
+}
+
+.menuHeader img{
+  max-width: 85px !important
+}
+
+/*.menu-animated { -webkit-transition-duration: 30000ms; -moz-transition-duration: 30000ms; transition-duration: 30000ms; }*/
+
+.pane:not(.loginBack) {
+  background: url(../img/bg-app.png) no-repeat center center fixed !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+}
+
+#mainAnimation {
+  -vendor-animation-duration: 5s;
+  -vendor-animation-delay: 5s;
+}

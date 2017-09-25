@@ -1,0 +1,63 @@
+<ion-view>
+
+  <ion-content class="lateralMenu">
+    <p style="color:white;margin-top: 50px;font-size:165x;" class="col-md-12">
+      Si necesitas mayor información, o tienes alguna pregunta, no
+      dudes en contactárnos para brindarte una mejor asesoria en tus
+      pedidos <strong style="font-family:SamsumgBold;font-weight:bold;">ACE Group</strong>.
+    </p>
+
+    <p style="color:white;margin-top: 20px;font-size:15px;" class="col-md-12">
+      Envíanos un mensaje aqui o bien comunicate a nuestro teléfono
+      <strong style="font-family:SamsumgBold;font-weight:bold;">+1 (619)710-4920</strong> y con gusto te atenderemos.
+    </p>
+
+    <p ng-if="enviado" style="display:block;width:80%;margin: 10px auto;color: #3c763d;background-color: #dff0d8;border-color: #d6e9c6;padding: 20px 10px;font-size: 13px;text-align: center;border-radius:7px;">
+      {{enviado}}
+    </p>
+
+    <div class="list" ng-if="!mandando">
+
+      <label class="item item-input item-stacked-label" style="padding-right: 16px;width:100% !important;border:none !important;">
+        <input value="{{loggedUser.email}}" style="padding-top:5px !important;color:black;padding-left: 15px;background:white!important;width:100% !important;font-size:13px;font-family:SamsumgRegular;" type="text" ng-disabled="true">
+      </label>
+
+      <label class="item item-input item-stacked-label" style="padding-right: 16px;width:100% !important;border:none !important;">
+        <input ng-model="mensaje.asunto" style="padding-top:5px !important;padding-left: 15px;background:white!important;width:100% !important;font-size:13px;font-family:SamsumgRegular;color:black !important;" type="tel" placeholder="Teléfono">
+      </label>
+
+      <label class="item item-input item-stacked-label" style="padding-right: 16px;width:100% !important;border:none !important;">
+        <textarea ng-model="mensaje.mensaje" style="padding-top:5px !important;padding-left: 15px;width:100% !important;font-size:13px;font-family:SamsumgRegular;resize:none;height:100px;" name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+      </label>
+
+      <div class="col-md-12">
+        <button ng-disabled="mensaje.mensaje.length==0 || mensaje.asunto.length==0" ng-click="mandar(mensaje)" class="button button-positive pull-right" style="margin-top: 20px !important;margin-bottom: 40px;border-radius:0;margin-right: 0px !important;">
+          ENVIAR
+        </button>
+      </div>
+
+      <div class="col-md-12">
+        <button ng-click="showMap()" class="button button-block button-positive" style="width: 100%!important;margin-left:0px !important;border-radius:0;background:#3AB54B !important;font-family:SamsumgBold;">
+          <i class="fa fa-map-o" aria-hidden="true" style="margin-right: 10px;"></i>VER UBICACION GOOGLE MAPS
+        </button>
+      </div>
+
+
+
+    </div>
+
+    <p ng-if="mandando" class="text-center" style="font-size:23px;margin-top:15px;color:white;">
+      <i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i>
+      Enviando Mansaje</p>
+
+
+
+
+
+  </ion-content>
+
+
+
+
+
+</ion-view>

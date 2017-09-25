@@ -1,0 +1,52 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Shats Events</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-right">
+        <span class="dropdown" uib-dropdown on-toggle="toggled(open)">
+          <a  class="sesionSelector dropdown-toggle" uib-dropdown-toggle>
+            <i class="fa fa-user-circle" aria-hidden="true"></i>{{vm.email}} <span class="caret"></span>
+            <!-- <i class="fa fa-user-circle" aria-hidden="true"></i>ximena_robles@gmail.com <span class="caret"></span> -->
+        </a>
+        <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+          <li>
+            <a ng-click="logout()">Cerrar Sesión</a>
+          </li>
+        </ul>
+        </span>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+
+<div class="col-md-1 sidebar">
+  <ul class="nav nav-sidebar">
+    <li ui-sref-active="active"><a ui-sref="app.clientes">Clientes</a></li>
+    <li ui-sref-active="active"><a ui-sref="app.pagos">Pagos</a></li>
+    <li ui-sref-active="active"><a ui-sref="app.paquetes">Paquetes</a></li>
+    <li ui-sref-active="active"><a ui-sref="app.eventos">Eventos</a></li>
+
+
+    <!-- <li ui-sref-active="active"><a ui-sref="app.paquetes">Paquetes</a></li>
+    <li ui-sref-active="active"><a ui-sref="app.eventos">Eventos</a></li> -->
+
+    <!-- <li ui-sref-active="active"><a ui-sref="app.clientes">Historial</a></li>
+    <li ui-sref-active="active"><a ui-sref="app.pagos">Pagos</a></li> -->
+  </ul>
+</div>
+<div ui-view class="col-md-11 mainContainer">
+</div>

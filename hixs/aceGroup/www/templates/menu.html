@@ -1,0 +1,162 @@
+<style media="screen">
+  .lateralMenu{
+    background: url(img/bg-app.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .lateralMenu .bar-stable,.lateralMenu a,.lateralMenu .item{
+    background:none !important;
+  }
+
+  .lateralMenu .item{
+    border:none !important;
+  }
+
+  .bar-stable{
+    background:white !important;
+  }
+
+  .title-center{
+    height:80px !important;
+    background:white !important;
+  }
+
+  .nav-bar-title img{
+    width: 110px;
+    margin: 10px auto;
+  }
+
+  .lateralMenu strong{
+    color:white;
+    text-transform:uppercase;
+  }
+
+  .lateralMenu .elemento{
+    background:white !important;
+    overflow:hidden;
+    width:90% !important;
+    margin:15px auto;
+    border-radius:5px;
+    padding:5px 0 !important;
+  }
+
+  .item-content{
+    padding:0 !important;
+  }
+
+  .infoUser span{
+    display:block;
+  }
+
+  .infoUser span:first-child{
+    text-transform:uppercase;
+    color:#3E5A81;
+    text-align:center;
+    font-weight:bold;
+  }
+
+  .infoUser span:last-child{
+    text-transform:uppercase;
+  }
+
+  .infoUser .divider{
+    display:block;
+    clear:both;
+    border-bottom:1px solid;
+    margin:5px 0;
+  }
+
+  .infoUser{
+    display:block;
+    float:left;
+  }
+</style>
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+      <ion-nav-title>
+            <img class="img-responsive" src="img/logo-header-azul.jpg">
+        </ion-nav-title>
+      <ion-nav-buttons side="right">
+          <i style="font-size:20px;position:relative;top:5px;right:5px;" class="fa fa-bell-o" aria-hidden="true"></i>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" width="370" class="lateralMenu">
+    <ion-content>
+      <ion-list>
+        <strong style="margin-top:20px;display:block;" class="col-md-12">Cuenta</strong>
+        <ion-item class="elemento" menu-close ui-sref="app.perfil">
+          <img class="pull-left" src="img/ico-user.png" alt="user">
+          <div class="infoUser">
+            <span>Jorge Damian Rivas Valdez</span>
+            <span class="divider"></span>
+            <span>Tijuana, México.</span>
+          </div>
+        </ion-item>
+        <strong class="col-md-12">Pedidos</strong>
+        <ion-item class="elemento" style="padding:0!important;" menu-close ui-sref="app.cotizador">
+          <img class="pull-left" src="img/ico-check.png" alt="user">
+
+          <div class="infoUser" style="line-height:65px;">
+            <span>pedidos verificados</span>
+          </div>
+        </ion-item>
+        <ion-item class="elemento" style="padding:0!important;" menu-close ui-sref="app.cotizador">
+          <img class="pull-left" src="img/ico-time.png" alt="user">
+          <div class="infoUser" style="line-height:65px;">
+            <span>pedidos verificados</span>
+          </div>
+        </ion-item>
+
+        <strong class="col-md-12">Herramientas</strong>
+
+        <ion-item class="elemento" style="padding:0!important;background:#682E8E !important;" menu-close ui-sref="app.cotizador">
+          <img class="pull-left" src="img/ico-cotizador.png" alt="user">
+
+          <div class="infoUser" style="line-height:65px;">
+            <span style="color:white !important;">Cotizador</span>
+          </div>
+        </ion-item>
+
+        <ion-item class="elemento" style="padding:0!important;background:#24B553 !important;" menu-close ui-sref="app.pedidos">
+          <img class="pull-left" src="img/ico-historial-de-compras.png" alt="user">
+          <div class="infoUser" style="line-height:65px;">
+            <span style="color:white !important;">Historial de compras</span>
+          </div>
+        </ion-item>
+
+        <ion-item class="elemento" style="padding:0!important;background:#FFAC37 !important;" menu-close ui-sref="app.noticias">
+          <img class="pull-left" src="img/ico-noticias.png" alt="user">
+          <div class="infoUser" style="line-height:65px;">
+            <span style="color:white !important;">Noticias</span>
+          </div>
+        </ion-item>
+
+        <strong class="col-md-12">Conexión</strong>
+
+        <ion-item class="elemento" menu-close ui-sref="login" style="background:#00ACDF !important;">
+
+
+          <img class="pull-left" src="img/ico-cerrar-sesion.png" alt="user">
+          <div class="infoUser" style="line-height:65px;">
+            <span style="color:white !important;">CERRAR SESIÓN</span>
+          </div>
+        </ion-item>
+
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

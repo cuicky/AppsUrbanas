@@ -1,0 +1,59 @@
+<ion-view>
+  <ion-content class="lateralMenu">
+    <ion-list >
+      <strong style="margin-top:40px;display:block;" class="col-md-12">Cuenta</strong>
+      <ion-item class="elemento" menu-close style="padding-left:10px !important;">
+        <img class="pull-left" src="img/ico-user.png" alt="user" style="top:0px !important;">
+        <div class="infoUser">
+          <span>{{loggedUser.email}}</span>
+          <span class="divider"></span>
+          <span>{{loggedUser.username}}</span>
+        </div>
+      </ion-item>
+      <strong class="col-md-12">Pedidos</strong>
+      <ion-item class="elemento" style="padding:0!important;padding-left:10px !important;" menu-close ui-sref="app.pedidos">
+        <img class="pull-left" src="img/ico-check.png" alt="user">
+
+        <div class="infoUser" style="line-height:65px;padding-left:10px !important;">
+          <span>Mis pedidos</span>
+        </div>
+      </ion-item>
+
+      <strong class="col-md-12">Herramientas</strong>
+
+      <ion-item class="elemento" style="padding:0!important;background:#682E8E !important;padding-left:10px !important;" menu-close ui-sref="app.cotizador">
+        <img class="pull-left" src="img/ico-cotizador.png" alt="user">
+
+        <div class="infoUser" style="line-height:65px;">
+          <span style="color:white !important;">Cotizador</span>
+        </div>
+      </ion-item>
+
+      <ion-item class="elemento" style="padding:0!important;background:#24B553 !important;padding-left:10px !important;" menu-close ui-sref="app.pedidos">
+        <img class="pull-left" src="img/ico-historial-de-compras.png" alt="user">
+        <div class="infoUser" style="line-height:65px;">
+          <span style="color:white !important;">Historial de compras</span>
+        </div>
+      </ion-item>
+
+      <ion-item class="elemento" style="padding:0!important;background:#FFAC37 !important;padding-left:10px !important;" menu-close ui-sref="app.noticias">
+        <img class="pull-left" src="img/ico-noticias.png" alt="user">
+        <div class="infoUser" style="line-height:65px;">
+          <span style="color:white !important;">Noticias</span>
+        </div>
+      </ion-item>
+
+      <strong class="col-md-12">Conexión</strong>
+
+      <ion-item class="elemento" menu-close ng-click="logout()" style="background:#00ACDF !important;padding-left:10px !important;">
+
+
+        <img class="pull-left" src="img/ico-cerrar-sesion.png" alt="user">
+        <div class="infoUser" style="line-height:65px;">
+          <span style="color:white !important;position:relative !important;top:3px !important;">CERRAR SESIÓN</span>
+        </div>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,54 @@
+
+<ion-side-menus enable-menu-with-back-views="false" class="menuTranslate">
+  <ion-side-menu-content ion-side-menu-content-scale>
+    <ion-nav-bar class="bar-calm menuHeader">
+      <ion-nav-back-button>
+        Atras
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left" style="position:relative;top:-3px !important;">
+        </button>
+        <!-- <img menu-toggle="left"  width="30" src="img/ico-menu.png" alt=""> -->
+      </ion-nav-buttons>
+
+      <ion-nav-title>
+            <img ui-sref="app.playlists" class="img-responsive" style="top:0px!important;max-width: 70px !important;left: 39% !important;position: relative !important;margin:0 !important;" src="img/logo-header-azul.jpg">
+        </ion-nav-title>
+
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" class="bar-calm menu-left-axis " class="menuTranslate">
+
+    <ion-content class="menuTranslate">
+      <ion-list class="menuPrincipal">
+
+        <ion-item  menu-close ui-sref="app.playlists">
+          <img src="img/ico-user-menu.png" alt="">
+          <span style="position:relative !important;top:5px !important;">MI PERFIL</span>
+
+        </ion-item>
+        <!-- <ion-item menu-close href="#/app/browse">
+          <img src="img/ico-payment-menu.png" alt="">
+          PAGO
+        </ion-item> -->
+        <ion-item menu-close onclick="window.open('http://98.171.211.245:5000/', '_system', 'location=yes');" style="padding-left: 0;" >
+          <img src="img/ico-chat-menu.png" alt="">
+          <span style="position:relative !important;top:16px !important;">REPORTE CLIENTES</span>
+        </ion-item>
+        <ion-item menu-close ui-sref="app.contacto" >
+          <img src="img/ico-contact-menu.png" alt="">
+          <span style="position:relative !important;top:5px !important;">CONTACTO</span>
+        </ion-item>
+
+        <ion-item ng-click="logout()" style="padding-left: 0;">
+          <!-- <img src="img/ico-contact-menu.png" alt=""> -->
+          <i class="fa fa-power-off" aria-hidden="true" style="color:#1fb5fb;font-size:25px;margin-right: 5px;width:15%;"></i>
+          <span style="position:relative !important;top:-3px !important;">CERRAR SESIÓN</span>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,26 @@
+<ion-view>
+  <ion-content class="lateralMenu">
+
+    <p ng-if="!orders" class="text-center" style="color: white;margin-top: 25px;min-height: 660px;line-height: 660px;font-family: SamsumgBold;font-size: 25px;">
+      <i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i>
+      Cargando pedidos</p>
+
+    <div class="list">
+
+    <div class="item item-avatar"  ng-repeat="ord in orders" style="color:white !important;margin-top:25px;" ng-if="orders.length>0">
+      <i class="fa fa-file-o" aria-hidden="true" style="color: white;font-size: 52px;display: block;float: left;margin-right: 10px;height: 70px;line-height: 70px;"></i>
+      <h2 style="color:white !important;">Orden #{{ord.id}}</h2>
+      <p style="color:white !important;">{{ord.date.format}}</p>
+      <p style="color:white !important;">{{ord.total |currency:"$"}}</p>
+      <p style="color:white !important;">
+        <span ng-if="ord.status=='processing'">Procesando</span>
+        <span ng-if="ord.status=='completed'">Completado</span>
+      </p>
+    </div>
+
+    <p class="text-center" ng-if="orders.length==0" style="color: white;margin-top: 25px;min-height: 660px;line-height: 660px;font-family: SamsumgBold;font-size: 25px;">
+      Aún no tienes pedidos
+    </p>
+</div>
+  </ion-content>
+</ion-view>

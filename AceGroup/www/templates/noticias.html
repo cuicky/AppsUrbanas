@@ -1,0 +1,42 @@
+<style media="screen">
+  .content{
+    -webkit-border-bottom-right-radius: 10px;
+-webkit-border-bottom-left-radius: 10px;
+-moz-border-radius-bottomright: 10px;
+-moz-border-radius-bottomleft: 10px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+  }
+</style>
+<ion-view class="lateralMenu">
+  <ion-content class="lateralMenu" style="padding-top: 30px;">
+    <p ng-if="!noticias" class="text-center" style="color: white;margin-top: 25px;min-height: 400px;line-height:400px;font-family: SamsumgBold;font-size: 25px;">
+      <i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i>
+      Cargando noticias</p>
+    <ion-list ng-if="noticias">
+
+    <ion-item ng-repeat="itm in noticias" style="text-decoration:none !important;max-width:90%;!important;position:relative !important;margin: 40px auto 0px auto !important;overflow:visible;" class="item-text-wrap">
+      <p style="position:absolute;width:60px;height:100px;background:white;top:-10px;right:50px;text-align: center;padding: 10px 0;">
+        <span style="display:block;font-size:20px;font-family:SamsumgBold;color:#B3B3B3;">{{itm.date | date:"dd"}}</span>
+        <span style="display:block;font-size:20px;font-family:SamsumgBold;color:#B3B3B3;">{{itm.date | date:"MMM"}}</span>
+        <span style="display:block;font-size:20px;color:#B3B3B3;">{{itm.date | date:"yyyy"}}</span>
+      </p>
+      <ion-thumbnail item-left ui-sref="app.detail({idNoticia:itm.id})">
+        <img class="img-responsive" style="margin:none !important;max-width:100% !important;margin-bottom: 0 !important;margin-top: 0 !important;" ng-src="{{itm.better_featured_image.source_url}}">
+      </ion-thumbnail>
+      <div class="content" style="background:white;padding: 20px 20px 25px 20px; 30px;overflow:hidden;">
+        <h2 style="text-decoration: none!important;margin-bottom: 10px;text-transform:uppercase;font-family:SamsumgBold;color:#08275F;">{{itm.title.rendered}}</h2>
+        <p style="text-decoration: none!important;"  ng-bind-html="itm.excerpt.rendered"></p>
+      </div>
+
+      <div style="margin-top: 15px;">
+        <strong style="margin-left: 20px;">COMPARTIR</strong>
+        <i  style="color:white;margin-left:10px;font-size:20px;" class="fa fa-facebook" aria-hidden="true"></i>
+        <i  style="color:white;margin-left:10px;font-size:20px;" class="fa fa-twitter" aria-hidden="true"></i>
+
+      </div>
+    </ion-item>
+
+  </ion-list>
+
+  </ion-content>
